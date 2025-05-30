@@ -297,15 +297,17 @@
             <div class="editor-section">
                 <div class="section-title">📝 Editor de Código</div>
                 <textarea id="codeEditor" class="code-editor" placeholder="Digite seu código EasyLanguage aqui...">programa exemplo
-inteiro x, y
-real resultado
+inteiro x, y;
+real resultado;
+
 inicio
     leia(x);
     leia(y);
     resultado = x + y * 2.5;
     escreva("O resultado é:");
     escreva(resultado);
-fim;</textarea>
+fim;
+</textarea>
 
                 <div class="controls">
                     <button id="compileBtn" class="btn btn-primary">🔧 Compilar</button>
@@ -314,27 +316,30 @@ fim;</textarea>
 
                 <div class="example-section">
                     <div class="example-title">💡 Exemplo de Sintaxe:</div>
-                    <div class="example-code">programa meuPrograma
-inteiro idade
-texto nome
-logico aprovado
+                    <div class="example-code">programa TesteCondicional
+    inteiro idade;
+    texto resultado;
+
 inicio
-    escreva("Digite seu nome:");
-    leia(nome);
-    escreva("Digite sua idade:");
+    escreva("Digite sua idade: ");
     leia(idade);
     
     se (idade >= 18) entao {
-        aprovado = verdadeiro;
-        escreva("Você é maior de idade");
+        resultado = "maior de idade";
+        escreva("Você é maior de idade!");
+        escreva("Pode votar e dirigir.");
     } senao {
-        aprovado = falso;
-        escreva("Você é menor de idade");
+        resultado = "menor de idade";
+        escreva("Você é menor de idade.");
+        se (idade >= 16) entao {
+            escreva("Mas já pode votar!");
+        } senao {
+            escreva("Ainda não pode votar.");
+        }
     }
     
-    enquanto (idade > 0) faca {
-        idade = idade - 1;
-    }
+    escreva("Status: ");
+    escreva(resultado);
 fim;</div>
                 </div>
             </div>
